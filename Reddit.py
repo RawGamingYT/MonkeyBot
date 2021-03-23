@@ -45,7 +45,7 @@ class Reddit(commands.Cog):
 	@commands.has_role("DJ")
 	async def _play(self, ctx, url):
 		if url == None:
-            await ctx.send('You must provide a reddit link.')
+			await ctx.send("You must provide a reddit link.")
 		else:
 			reddit = Downloader(max_q=True)
 			reddit.overwrite = True
