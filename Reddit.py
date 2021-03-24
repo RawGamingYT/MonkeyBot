@@ -47,7 +47,7 @@ class Reddit(commands.Cog):
 		if url == None:
 			await ctx.send("You must provide a reddit link.")
 		else:
-			reddit = Downloader(max_q=True)
+			reddit = Downloader(min_q=True)
 			reddit.overwrite = True
 			reddit.url = url
 			reddit.check()
